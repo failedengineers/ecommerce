@@ -1,9 +1,9 @@
 services:
-  - type: web
-    name: ecommerce
-    env: python
-    buildCommand: 
-      - pip install -r requirements.txt
-    startCommand: |
-      python manage.py migrate &&
-      gunicorn ecommerce.wsgi
+  - name: ecommerce
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py migrate  # Add this line
+    startCommand: gunicorn ecommerce.wsgi
