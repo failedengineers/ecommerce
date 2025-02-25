@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+
+{%  load  static %}
+{% block title %} project-Disease Detection{% endblock title%}
+{% block body %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+    width: 100vw;      /* Full viewport width to ensure consistency */
+    height: 450px;      /* Fixed height across all devices */
+    object-fit: cover; /* Ensures proper scaling without distortion */
+    display: block;    
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Full-width product image with fixed height -->
+        <img src="{% static 'm.avif'%}" class="product-image" alt="Product Image">
+    </div>
+    
+    <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="fw-bold">Disease Detection</h2>
+            <p class="text-muted">AI-Powered Disease Detection at Your Fingertips</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <p class="lead">Welcome to our <strong>AI-Based Disease Detection System</strong>, a revolutionary platform designed to assist in medical diagnostics using cutting-edge machine learning technology.</p>
+                    <p>Our system enables users to <strong>upload an image</strong> and instantly analyze it for potential diseases. Powered by advanced deep learning algorithms, our model ensures <strong>high accuracy in identifying symptoms</strong> from medical images, making healthcare more accessible and efficient.</p>
+                    <p>With a focus on precision and ease of use, our platform helps doctors and patients get <strong>quick and reliable preliminary assessments</strong>, reducing the time for diagnosis and improving healthcare outcomes.</p>
+                    <p class="text-primary fw-semibold">Empowering healthcare with AI – faster, smarter, and more efficient disease detection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body%}

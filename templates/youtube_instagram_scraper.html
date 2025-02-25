@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} PROJECTS{% endblock title%}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+    width: 100vw;      /* Full viewport width to ensure consistency */
+    height: 500px;      /* Fixed height across all devices */
+    object-fit: cover; /* Ensures proper scaling without distortion */
+    display: block;    
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Full-width product image with fixed height -->
+        <img src="{% static 'web.png'%}" class="product-image" alt="Product Image">
+    </div>
+    
+   <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="fw-bold">YouTube & Instagram Scraper</h2>
+            <p class="text-muted">Extract Valuable Data from Social Media Platforms</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <p class="lead">Welcome to <strong>YouTube & Instagram Scraper</strong>, a powerful tool designed to fetch real-time data from social media platforms.</p>
+                    <p>Our system can **scrape YouTube videos, comments, likes, and views** while also extracting **Instagram posts, captions, hashtags, and follower details**. This automated data collection helps businesses, marketers, and analysts gather insights effortlessly.</p>
+                    <p>With seamless integration and **structured data storage**, this scraper simplifies **social media monitoring, trend analysis, and content research** in just a few clicks.</p>
+                    <p class="text-primary fw-semibold">Unlock valuable social media insights with our AI-powered web scraping tool.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock body %}
+</body>
+</html>
+
+
+

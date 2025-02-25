@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<h1 class="my-2 text-center">GULATI DEVELOPERS</h1>
+
+<div class="container-fluid mt-3 my-5 text-center">
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'developer.webp' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images.jfif' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'p.png' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<h1 class='heading text-center'>OUR PROJECTS</h1>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'FACE.webp' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">PYTHON FACE RECOGNITION DESKTOP APPLICATION</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+               <a href="{% url 'face_recognition' %}" class="btn btn-sm btn-outline-secondary">View</a>
+
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'AI.jpg' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">VIRTUAL AI/GOOGLE ASSISTANT</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'virtual_ai' %}" class="btn btn-sm btn-outline-secondary">View</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'stock.webp' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">STOCK DATA</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'stock_data' %}" class="btn btn-sm btn-outline-secondary">View</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'resume.avif' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">RESUME/PORTFOLIO SHOWCASE WEBSITE</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'resume_showcase' %}" class="btn btn-sm btn-outline-secondary">View</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'disease.jfif' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">DISEASE DETECTION USING ML</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'disease_detection' %}" class="btn btn-sm btn-outline-secondary">View</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="{% static 'scraper.jfif' %}" class="d-block w-100 img-fluid" style="height: 400px; object-fit: cover;" alt="Developer Image">
+        <div class="card-body">
+          <p class="card-text">YOUTUBE AND INSTA SCRAPER</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <a href="{% url 'youtube_instagram_scraper' %}" class="btn btn-sm btn-outline-secondary">View</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mb-5 pb-5"></div>
+
+{% endblock body %}
