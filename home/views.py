@@ -4,10 +4,13 @@ from datetime import datetime
 from django.core.management import call_command
 from django.http import HttpResponse
 
-def run_migrations(request):
-    call_command('migrate')
-    return HttpResponse("Migrations done successfully 😏🔥")
+from django.core.management import call_command
+from django.http import HttpResponse
 
+def run_migrations(request):
+    call_command('makemigrations')
+    call_command('migrate')
+    return HttpResponse("All Migrations Done 💪😏")
 
 
 def about(request):
