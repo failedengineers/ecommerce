@@ -1,6 +1,14 @@
 from django.shortcuts import render,HttpResponse
 from home.models import contactus
 from datetime import datetime
+from django.core.management import call_command
+from django.http import HttpResponse
+
+def run_migrations(request):
+    call_command('migrate')
+    return HttpResponse("Migrations done successfully 😏🔥")
+
+
 
 def about(request):
     return render(request,'about.html')
