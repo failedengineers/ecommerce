@@ -2,6 +2,10 @@
 from django.contrib import admin
 from django.urls import path
 from home import views
+from .views import run_migrations
+
+
+
 
 urlpatterns = [
     path('about',views.about,name='about'),
@@ -14,7 +18,7 @@ urlpatterns = [
     path('project/stock-data/', views.stock_data_view, name='stock_data'),
     path('project/resume-showcase/', views.resume_showcase_view, name='resume_showcase'),
     path('project/disease-detection/', views.disease_detection_view, name='disease_detection'),
-    path('project/youtube-instagram-scraper/', views.youtube_instagram_scraper_view, name='youtube_instagram_scraper')
+    path('project/youtube-instagram-scraper/', views.youtube_instagram_scraper_view, name='youtube_instagram_scraper'),
     path('run-migrations/', run_migrations, name='run_migrations')
 
     
