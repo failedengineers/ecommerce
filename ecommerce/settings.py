@@ -17,6 +17,18 @@ from pathlib import Path
 import os
 
 
+import dj_database_url
+
+RENDER = os.getenv("RENDER")
+
+if RENDER:
+    DEBUG = False
+    ALLOWED_HOSTS = [os.getenv("RENDER_EXTERNAL_HOSTNAME", "localhost")]
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+    SECURE_SSL_REDIRECT = True
+    CSRF_TRUSTED_ORIGINS = [f"https://{os.getenv('RENDER_EXTERNAL_HOSTNAME')}"]
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 
